@@ -4,6 +4,7 @@ import cors from "cors";
 import morgan from "morgan";
 import mongoose from "mongoose";
 import updateRouter from "./routes/updataRouter.js";
+import balanceRouter from "./routes/balanceRouter.js";
 
 dotenv.config();
 
@@ -25,6 +26,7 @@ async function main() {
 }
 
 app.use("/update-database", updateRouter);
+app.use("/balance", balanceRouter);
 // eslint-disable-next-line no-unused-vars
 app.use((err, req, res, next) => {
   console.log(err.message);
