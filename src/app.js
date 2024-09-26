@@ -3,7 +3,7 @@ import dotenv from "dotenv";
 import cors from "cors";
 import morgan from "morgan";
 import mongoose from "mongoose";
-import updateRouter from "./routes/updataRouter.js";
+import updateRouter from "./routes/updateRouter.js";
 import balanceRouter from "./routes/balanceRouter.js";
 
 dotenv.config();
