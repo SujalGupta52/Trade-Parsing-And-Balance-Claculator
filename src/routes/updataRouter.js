@@ -24,6 +24,7 @@ updateRouter.post("/", upload.single("file"), (req, res, next) => {
       });
     })
     .on("end", async () => {
+      await Trade.deleteMany({});
       await Trade.insertMany(results);
       res.json({ message: "File successfully uploaded and data stored." });
     })
